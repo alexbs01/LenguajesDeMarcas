@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="http://www.w3.org/2001/XMLSchema.xsd"
+>
+	<xs:element name="Lista">
+		<xs:complexType> <!-- lista es complejo porque contiene elementos -->
+			<xs:sequence>
+				<xs:element name="Curso" maxOccurs="unbounded">
+					<xs:complexType>  <!-- curso es complejo porque contiene elementos -->
+						<xs:sequence>
+							<xs:element name="Titulo" type="xs:string"/>
+							<xs:element name="Horas" type="xs:nonNegativeInteger"/>
+							<xs:element name="edad1" type="xs:positiveInteger"/>
+							<xs:element name="edad2" type="xs:nonNegativeInteger"/>
+							<xs:element name="edad3" type="xs:positiveInteger" minInclusive="20"/>
+							<xs:element name="edad4" type="xs:positiveInteger" minInclusive="5" maxInclusive="7"/>
+							<xs:element name="nombre1" type="xs:string"/>
+							<xs:element name="nombre2" type="xs:string"/>
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:minLength value="3"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="titulo1">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="UNO"/>
+										<xs:enumeration value="DOS"/>
+										<xs:enumeration value="TRES"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="titulo2">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:minLength value="5"/> 
+										<xs:maxLength value="10"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="clave1">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:pattern value="A([A-Z]|[0-9])*"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="clave2" type="tipoClave2"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="tipoClave2">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[A-Z]{3}[a-z]{2}"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

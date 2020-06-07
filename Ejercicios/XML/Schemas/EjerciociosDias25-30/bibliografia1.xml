@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <bibliografia xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="bibliografia1.xsd">
+	 <libro paginas="100">
+		<titulo>XML Práctico</titulo>
+	 </libro>
+	 <libro paginas="120">
+		<titulo>XML Schemas</titulo>
+	 </libro>
+ </bibliografia>
+
+ <!-- paginas es un entero positivo y obligatorio-->

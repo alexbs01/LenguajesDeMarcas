@@ -1,0 +1,28 @@
+table {border: #00F solid thin; 
+	border-collapse: collapse;}
+	
+table caption {caption-side: bottom;
+	text-align: center; color: #449;
+	font-weight: bold;}
+
+thead {border: #00F solid thin; 
+	background-color: #77C; 
+	color: #FFF;}
+
+tbody tr {border: #00F dotted thin;}
+tbody tr td {border: #00F dotted thin;}
+tbody tr.fimpar {background-color: #2CB835;}
+tbody tr:nth-child(even) {background-color: green;}
+tbody tr:hover {background-color: #FFD321; 
+	border: solid thin; 
+	border-colapse: colapase}
+
+tfoot {border: #00F solid thin; 
+	background-color: #77C; 
+	color: #FFF; 
+	text-align: center;}
+
+a:hover {background-color: #2CB835; 
+	text-transform: none}
+a {text-decoration: none; 
+	color: black;}

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="http://www.w3.org/2001/XMLSchema.xsd"
+>
+	<xs:element name="Modulo">
+		<xs:complexType> 
+			<xs:sequence>
+				<xs:element name="Nombre" type="xs:string"/>
+				<xs:element name="Contidos" maxOccurs="unbounded">
+					<xs:complexType>  
+						<xs:sequence>
+							<xs:element name="Bloque" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Titulo" type="xs:string"/>
+										<xs:element name="Descripcion" type="xs:string"/>
+									</xs:sequence>
+									<xs:attribute name="numero" type="xs:integer"/>
+									<xs:attribute name="evaluacion" type="tipoEvaluacion"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="tipoEvaluacion">
+		<xs:restriction base="xs:integer">
+			<xs:minInclusive value="1"/>
+			<xs:maxInclusive value="3"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

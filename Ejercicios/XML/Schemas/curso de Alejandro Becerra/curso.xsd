@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+		   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		   xsi:noNamespaceSchemaLocation="http://www.w3.org/2001/XMLSchema.xsd">
+	<xs:element name="Lista">
+		<xs:complexType> <!-- lista es complejo porque contiene elementos -->
+			<xs:sequence>
+				<xs:element name="Curso" maxOccurs="unbounded">
+					<xs:complexType>  <!-- curso es complejo porque contiene elementos -->
+						<xs:sequence>
+							<xs:element name="Titulo" type="xs:string"/>
+							<xs:element name="fInicio" type="xs:date"/>
+							<xs:element name="Horas" type="xs:nonNegativeInteger"/>
+							<xs:element name="precio" type="xs:positiveInteger"/>
+							<xs:element name="horaComienzo" type="xs:time"/>
+							<xs:element name="horaFin" type="xs:time"/>
+							<xs:element name="examen" type="xs:dateTime"/>
+							<xs:element name="chuleta" type="xs:boolean"/>
+							<xs:element name="turnoTarde" type="xs:boolean"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
+
+
+<!--  Estructura:
+    Lista: es una secuencia de un solo elemento:curso
+         Curso : es una secuencia de dos elementos:titulo y horas. El curso se repite.
+              Titulo
+              Horas
+         Curso
+              Título
+              Horas
+ -->

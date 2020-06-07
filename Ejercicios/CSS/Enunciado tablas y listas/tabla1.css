@@ -1,0 +1,19 @@
+caption {color: lime;}
+.primera {color: red;}
+#una td:first-letter, #dos td:first-letter, #tres td:first-letter {font-size: 200%;}
+
+#una {border: green solid 3px; 
+	border-collapse: collapse;}
+#una td {border: red solid thin;
+	border-colapse: colapse;}
+
+#dos {border-collapse: collapse;}	
+#dos td {border: orange solid 15px;}
+
+#tres {border: green solid thin;}
+#tres td {border: yellow solid 15px;}
+
+thead {background-color: red;}
+#cuatro tbody {background-color: gray;}
+tfoot {background-color: yellow;
+	text-align: left;}

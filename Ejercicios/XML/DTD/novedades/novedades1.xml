@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE novedades SYSTEM "novedades1.dtd">
+<?xml-stylesheet type="text/css" href="cssnovedades1.css"?>
+<novedades>
+    <novedad fecha="20100708">
+        <titulo>Inagurada la Web WML en Castellano</titulo>
+        <url>index.htm</url>
+        <descripcion>El 8 de Julio del 2010 se inagura oficialmente la Web de WML en castellano.</descripcion>
+    </novedad>
+   <novedad fecha="20100708">
+        <titulo>Generar WML desde un Servlet</titulo>
+        <url>articulos/wmlservlet.htm</url>
+        <descripcion>Inagurada la sección artículos con un interesante artículo sobre como generar WML desde un Servlet.</descripcion>
+    </novedad>
+    <novedad fecha="20100708">
+        <titulo>Direcciones generales sobre WAP</titulo>
+        <url>recursos/wapdev.htm</url>
+        <descripcion>Recopilacion de interesantes direcciones sobre WAP</descripcion>
+    </novedad>
+   <novedad fecha="20100708">
+        <titulo>Nuestro primer FAQ sobre WAP</titulo>
+        <url>faqs/faqwap.htm</url>
+        <descripcion>Las preguntas y respuesta más habituales sobre la tecnología WAP recogidas en este estupendo FAQ.</descripcion>
+    </novedad>
+</novedades>

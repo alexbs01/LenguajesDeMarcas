@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ies nombre="IES Abastos" web="http://www.iesabastos.org/" >
+	<ciclos>
+		<ciclo id="ASIR">
+			<nombre>Administración de Sistemas Informáticos en Red ALEJANDRO</nombre>
+			<grado>Superior</grado>
+			<decretoTitulo año="2009" />
+		</ciclo>
+		<ciclo id="DAW">
+			<nombre>Desarrollo de Aplicaciones Web ALEJANDRO</nombre>
+			<grado>Superior</grado>
+			<decretoTitulo año="2010" />
+		</ciclo>
+		<ciclo id="SMR">
+			<nombre>Sistemas Microinformáticos y Redes ALEJANDRO</nombre>
+			<grado>Medio</grado>
+			<decretoTitulo año="2008" />
+		</ciclo>
+	</ciclos>
+</ies>

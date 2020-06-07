@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="http://www.w3.org/2001/XMLSchema.xsd"
+>
+	<xs:element name="informacion">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Curso" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:group ref="grupoCurso"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="profesor" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:group ref="grupoProfesores"/>
+						<xs:attributeGroup ref="grupAtributosProfesores"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="alumno" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:group ref="grupoAlumno"/>
+						<xs:attributeGroup ref="grupoAtributosInstiEdad"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<!-- Grupos de elementos -->
+		<!-- Grupo del curso -->
+		<xs:group name="grupoCurso">
+			<xs:sequence>
+				<xs:element name="codigoC" type="tipoCodigo"/>
+				<xs:element name="Titulo">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="10"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Horas" type="xs:positiveInteger" default="10"/>
+				<xs:element name="fechaComienzo" minOccurs="0">
+					<xs:complexType>
+						<xs:attribute name="dia">
+							<xs:simpleType>
+								<xs:restriction base="xs:integer">
+									<xs:minInclusive value="1"/>
+									<xs:maxInclusive value="280"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:group>
+		
+		<!-- Grupo de los profesores -->
+		<xs:group name="grupoProfesores">
+			<xs:sequence>
+				<xs:element name="codigo" type="tipoCodigo"/>
+				<xs:element name="nombre" type="xs:string"/>
+				<xs:element name="asignaturas" type="tipoAsignaturas"/>
+				<xs:element name="comienzo" type="tipoComienzo"/>
+			</xs:sequence>
+		</xs:group>
+		
+		<!-- Grupo de los alumnos -->
+		<xs:group name="grupoAlumno">
+			<xs:sequence>
+				<xs:element name="codigo" type="xs:string"/>
+				<xs:element name="nombre" type="xs:string"/>
+				<xs:element name="obersevaciones" type="xs:string"/>
+				<xs:choice>
+					<xs:element name="correoE" type="tipoCorreoE"/>
+					<xs:element name="telefono" type="tipoTelefono"/>
+				</xs:choice>
+			</xs:sequence>
+		</xs:group>
+	<!-- Fin de grupo de elementos -->
+	
+	
+	<!-- Grupos de atributos -->
+		<!-- Grupo de atributos de instituto y edad, es para alumnos y profesores -->
+		<xs:attributeGroup name="grupoAtributosInstiEdad">
+			<xs:attribute name="instituto" type="tipoInstituto"/>
+			<xs:attribute name="edad" type="xs:positiveInteger"/>
+		</xs:attributeGroup>
+		
+		<!-- Grupo de atributos para profesores -->
+		<xs:attributeGroup name="grupAtributosProfesores">
+			<xs:attribute name="especialidad" type="xs:string"/>
+			<xs:attributeGroup ref="grupoAtributosInstiEdad"/>
+		</xs:attributeGroup>
+	<!-- Fin de grupos de atributos -->
+	
+	<!-- Hacer una lista con las asignaturas -->
+		<!-- Enumeracion de las asignaturas de los profesores -->
+		<xs:simpleType name="listaAsignaturas">
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="LM"/>
+				<xs:enumeration value="SR"/>
+				<xs:enumeration value="PR"/>
+			</xs:restriction>
+		</xs:simpleType>
+		
+		<!-- Convierte la enumeracion de las asiganturas de arriba a una lista -->
+		<xs:simpleType name="tipoAsignaturas">
+			<xs:list itemType="listaAsignaturas"/>
+		</xs:simpleType>
+	<!-- Fin de hacer una lista con las asignaturas -->
+	
+	
+	<!-- Hacer una union ente fecha y semestre -->
+		<!-- Enumera las dos posibilidades de semestre -->
+		<xs:simpleType name="tipoSemestre">
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="1SEMESTRE"/>
+				<xs:enumeration value="2SEMESTRE"/>
+			</xs:restriction>
+		</xs:simpleType>
+		
+		<!-- Une las dos posibilidades de semestre de arriba con una fecha -->
+		<xs:simpleType name="tipoComienzo">
+			<xs:union memberTypes="xs:date tipoSemestre"/>
+		</xs:simpleType>
+	<!-- Fin de hacer una union ente fecha y semestre -->
+	
+	<!-- Tipo de instituto, A1 o A2 -->
+	<xs:simpleType name="tipoInstituto">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="A1"/>
+			<xs:enumeration value="A2"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<!-- Patrones que necesita el XML -->
+		<!-- Patron de codigoC -->
+		<xs:simpleType name="tipoCodigo">
+			<xs:restriction base="xs:string">
+				<xs:pattern value="[A-Z]\d\d?"/>
+			</xs:restriction>
+		</xs:simpleType>
+		
+		<!-- Patron de correoE (EMail) -->
+		<xs:simpleType name="tipoCorreoE">
+			<xs:restriction base="xs:string">
+				<xs:pattern value="\w+@\w+.\w+"/>
+			</xs:restriction>
+		</xs:simpleType>
+		
+		<!-- Patron de telefono -->
+		<xs:simpleType name="tipoTelefono">
+			<xs:restriction base="xs:string">
+				<xs:pattern value="\d{9}"/>
+			</xs:restriction>
+		</xs:simpleType>
+	<!-- Fin de patrones que necesita el XML -->
+</xs:schema>

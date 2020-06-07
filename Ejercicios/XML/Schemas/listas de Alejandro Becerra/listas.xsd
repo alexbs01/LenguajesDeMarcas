@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="http://www.w3.org/2001/XMLSchema.xsd">
+	<xs:element name="Lista">
+		<xs:complexType> <!-- lista es complejo porque contiene elementos -->
+			<xs:sequence>
+				<xs:element name="Curso" maxOccurs="unbounded">
+					<xs:complexType>  <!-- curso es complejo porque contiene elementos -->
+						<xs:sequence>
+							<xs:element name="Titulo" type="xs:string"/>
+							<xs:element name="Horas" type="xs:nonNegativeInteger"/>
+							<xs:element name="fechas" type="tipoFechas"/>
+							<xs:element name="valoraciones">
+								<xs:simpleType>
+									<xs:list itemType="xs:integer"/>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="notaMedia" type="tipoNotaMedia"/>
+							<xs:element name="notas" type="tipoNotas"/>
+							<xs:element name="cicloReferencia" type="tipoCicloReferencia"/>
+							<xs:element name="ciclos" type="tipoCiclos" maxOccurs="3"/>
+							<xs:element name="edades1" type="tipoEdades1"/>
+							<xs:element name="edades2" type="tipoEdades2"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="tipoFechas">
+		<xs:list itemType="xs:date"/>
+	</xs:simpleType>
+	<xs:simpleType name="tipoNotaMedia">
+		<xs:restriction base="xs:integer">
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="10"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tipoNotas">
+		<xs:list itemType="tipoNotaMedia"/>
+	</xs:simpleType>
+	<xs:simpleType name="tipoCicloReferencia">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="ASI"/>
+			<xs:enumeration value="DAM"/>
+			<xs:enumeration value="SMR"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tipoCiclos">
+		<xs:list itemType="tipoCicloReferencia"/>
+	</xs:simpleType>
+	<xs:simpleType name="menoresDeEdad">
+		<xs:restriction base="xs:integer">
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="17"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tipoEdades1">
+		<xs:list itemType="menoresDeEdad"/>
+	</xs:simpleType>
+	<xs:simpleType name="mayoresDeEdad">
+		<xs:restriction base="xs:integer">
+			<xs:minInclusive value="18"/>
+			<xs:maxInclusive value="150"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tipoEdades2">
+		<xs:list itemType="mayoresDeEdad"/>
+	</xs:simpleType>
+</xs:schema>

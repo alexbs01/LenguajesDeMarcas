@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="http://www.w3.org/2001/XMLSchema.xsd"
+>
+	<xs:element name="Lista">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Curso" maxOccurs="unbounded">
+					<xs:complexType> 
+						<xs:sequence>
+							<xs:element name="Titulo" type="xs:string"/>
+							<xs:element name="Horas" type="xs:nonNegativeInteger"/>
+							<xs:element name="talla1" type="tipoTalla1"/>
+							<xs:element name="talla2" type="tipoTalla2"/>
+							<xs:element name="talla3" type="tipoTalla3" maxOccurs="2"/>
+							<xs:element name="talla4" type="tipoTalla4"/>
+							<xs:element name="valoracion" type="tipoValoracion"/>
+							<xs:element name="edad" type="tipoEdad"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="mayoresQueCero">
+		<xs:restriction base="xs:integer">
+			<xs:minInclusive value="0"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="valoracionBMR">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="B"/>
+			<xs:enumeration value="M"/>
+			<xs:enumeration value="R"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tipoTalla1">
+		<xs:restriction base="xs:integer">
+			<xs:enumeration value="36"/>
+			<xs:enumeration value="38"/>
+			<xs:enumeration value="40"/>
+			<xs:enumeration value="42"/>
+			<xs:enumeration value="44"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tipoTalla2">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="XS"/>
+			<xs:enumeration value="S"/>
+			<xs:enumeration value="M"/>
+			<xs:enumeration value="L"/>
+			<xs:enumeration value="XL"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tipoTalla3">
+		<xs:union memberTypes="tipoTalla1 tipoTalla2"/>
+	</xs:simpleType>
+	<xs:simpleType name="tipoTalla4">
+		<xs:list itemType="tipoTalla1"/>
+	</xs:simpleType>
+	<xs:simpleType name="tipoValoracion">
+		<xs:union memberTypes="mayoresQueCero valoracionBMR"/>
+	</xs:simpleType>
+	<xs:simpleType name="tipoEdad">
+		<xs:union>
+			<xs:simpleType>
+				<xs:restriction base="xs:integer">
+					<xs:minInclusive value="1"/>
+					<xs:maxInclusive value="70"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="niño"/>
+					<xs:enumeration value="adolescente"/>
+					<xs:enumeration value="adulto"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+</xs:schema>

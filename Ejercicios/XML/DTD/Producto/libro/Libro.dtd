@@ -1,0 +1,10 @@
+<!ELEMENT Libro (Titulo, Abstract, Categorias, Precio?>
+	<!ATTLIST Libro isbn ID #REQUIRED NMTOKEN>
+	<!ATTLIST Libro fecha NMTOKENS>
+	<!ATTLIST Libro paginas CDATA>
+	<!ELEMENT Titulo (#PCDATA)>
+	<!ELEMENT Abstract (#PCDATA)>
+	<!ELEMENT Categorias (Categoria, Categoria, Categoria)>
+		<!ELEMENT Categoria (#PCDATA)>
+	<!ELEMENT Precio (#PCDATA)>
+		<!ATTLIST Precio moneda (dol|eur|lib)>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Lista xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="union.xsd">
+	<Curso>
+		<Titulo>Lenguaje de Marcas</Titulo>
+		<Horas>200</Horas> 
+		<festivosLocales>Reyes</festivosLocales>
+		<festivosLocales>2018-12-12</festivosLocales>
+		<!-- posibles valores: Una fecha o Pilar o Reyes-->
+		<valoracion>Buena</valoracion>  <!-- Buena, Mala, Regular -->
+		<valoracion>Mala</valoracion>
+		<valoracion>10</valoracion>  <!-- numero entre 10 y 100 -->
+		<!--xs:gMonthDay
+Define el valor de la fecha referente al mes y al día (MM-DD). Incluir dos guiones antes del mes-->
+		 <fechaComienzo>--05-17</fechaComienzo> 
+	</Curso>
+	<Curso>
+		<Titulo>BBDD</Titulo>
+		<Horas>210</Horas> 
+		<fechaComienzo>2018-12-12</fechaComienzo> 
+	</Curso>
+</Lista>

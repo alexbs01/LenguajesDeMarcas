@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Catálogo>
+	<Marca id="TOSH" nome="Toshiba" distribuidor="IM Comp">
+		<Portatil ref="Satellite A300-203 ALEJANDRO">
+				<Texto>Toshiba Satellite A300-203 T6400/3GB/320GB/ATI HD 3470/15.4"</Texto>
+				<SO>Windows® Vista® Home Premium</SO>
+				<Procesador>Core2 Duo T6400 a 2 GHz</Procesador>
+				<Memoria>3 GB (1024 + 2048)</Memoria>
+				<Disco>320 GB SATA 5400 rpm</Disco>
+				<Pantalla>TruBrite WXGA TFT 15,4" 1.280 x 800</Pantalla>
+				<Graficos>ATI Mobility Radeon™ HD 3470</Graficos>
+				<LAN>Ethernet 10/100</LAN>
+				<Wireless>802.11a/b/g</Wireless>
+		</Portatil>
+		<Portatil ref="Satellite U400-200 ALEJANDRO">
+				<Texto>Toshiba Satellite U400-200 P8400/4GB/320GB/13.3"</Texto>
+				<SO>Windows® Vista® Home Premium</SO>
+				<Procesador>Core2 Duo P8400 a 2,26 GHz</Procesador>
+				<Memoria>4 GB (2048 + 2048)</Memoria>
+				<Disco>320 GB</Disco>
+				<Pantalla>TruBrite WXGA TFT 13,3" 1.280 x 800</Pantalla>
+				<Graficos>Intel® GMA 4500M HD</Graficos>
+				<LAN>Ethernet 10/100</LAN>
+				<Wireless>802.11a/b/g</Wireless>
+		</Portatil>
+	</Marca>
+	<Marca id="ACER" nome="Acer" distribuidor="IM Comp">
+		<Portatil ref="Extensa 5630Z ALEJANDRO">
+				<Texto>Acer Extensa 5630Z T3400/4GB/320GB 15.4"</Texto>
+				<Procesador>Dual-Core T3400</Procesador>
+				<Memoria>4 GB (2048 + 2048)</Memoria>
+				<Disco>320 GB 5400rpm</Disco>
+				<Pantalla>15,4" WXGA CristalBrite 1.280 x 800</Pantalla>
+				<LAN>Ethernet 10/100/1000</LAN>
+				<Wireless>802.11b/g/n</Wireless>
+		</Portatil>
+	</Marca>
+</Catálogo>

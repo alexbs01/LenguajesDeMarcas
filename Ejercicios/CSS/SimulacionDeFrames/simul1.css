@@ -1,0 +1,16 @@
+#indice, #contenido {position:absolute; 
+	top:15%; 
+	bottom:10%;}
+
+#indice {background:#7CE3FC;
+	position:absolute; 
+	left:5%;
+	width:15%;}
+	
+#contenido {background:orange; 
+	position:absolute; 
+	right:10%; 
+	width:65%; 
+	overflow:hidden;}
+
+#Apartado1, #Apartado2 {height:100%;}

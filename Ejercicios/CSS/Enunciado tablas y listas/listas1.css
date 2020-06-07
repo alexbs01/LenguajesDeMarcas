@@ -1,0 +1,16 @@
+#una {list-style-type: lower-alpha;}
+
+#dos {list-style-type: lower-roman; 
+	margin-left: 30px; 
+	background-color: yellow;}
+
+#tres {list-style-image: url(./icono.png); 
+	margin-bottom: 50px;}
+
+#cuatro li {display: inline;
+	background-color:yellow; 
+	padding: 20px;
+	margin: 50px;}
+
+.murcia {color: green;
+	font-weight: bold;}

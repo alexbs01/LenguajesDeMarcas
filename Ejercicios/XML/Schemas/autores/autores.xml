@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<autores xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="autores.xsd">
+	<autor>
+		<nombre>Pepito</nombre>
+		<edad>12</edad>
+	</autor>
+	<autor>
+		<nombre>Juan</nombre>
+		<edad>25</edad>
+	</autor>
+	<autor>
+		<nombre>Ines</nombre>
+		<edad>26</edad>
+	</autor>
+	<autor>
+		<nombre>Andres</nombre>
+		<edad>20</edad>
+	</autor>
+</autores>

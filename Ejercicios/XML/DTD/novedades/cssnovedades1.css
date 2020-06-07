@@ -1,0 +1,21 @@
+novedades {border: red solid 2px;
+	padding:1%;
+	width:80%;
+	display:table;
+	border-collapse:separate;} 
+
+novedad {display:table-row;}
+
+novedad * {display:table-cell;
+	padding:1%;
+	border: green solid 2px;
+	margin:3%;}
+
+titulo, url {width:25%;}
+
+descripcion {width:50%;}
+
+/* titulo, url, descripcion {border: green solid 3px; */
+	/* display:table-cell; */
+	/* margin:5px;} */
+	

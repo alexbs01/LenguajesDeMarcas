@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cuerpoCarta xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="saludo.xsd">
+
+	<saludo>Querido Sr.</saludo>
+	<nombre>Robert Smith</nombre>.
+	Su pedido de <cantidad>1</cantidad>
+	<nombreProducto>Monitor de Bebés</nombreProducto> 
+	fue enviado desde nuestro almacén el 
+	<fechaEnvio>2015-05-21</fechaEnvio>
+</cuerpoCarta>

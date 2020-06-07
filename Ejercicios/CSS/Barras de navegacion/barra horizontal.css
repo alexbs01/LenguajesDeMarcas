@@ -1,0 +1,15 @@
+.primeiroli a {border-width:0px;}
+
+a {text-decoration:none; 
+	color:white; 
+	background:cyan; 
+	display:inline; 
+	border-left:2px solid #CCC;
+	padding:20px 35px;
+	text-align:center;
+	font-weight:bold;
+	float:left}
+
+a:hover {color:blue;}
+
+ul {list-style-type:none;}

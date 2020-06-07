@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="http://www.w3.org/2001/XMLSchema.xsd">
+	<xs:element name="Lista">
+		<xs:complexType> <!-- lista es complejo porque contiene elementos -->
+			<xs:sequence>
+				<xs:element name="Curso" maxOccurs="unbounded">
+					<xs:complexType>  <!-- curso es complejo porque contiene elementos -->
+						<xs:sequence>
+							<xs:element name="Titulo" type="xs:string"/>
+							<xs:element name="Horas" type="xs:nonNegativeInteger"/>
+							<xs:element name="festivosLocales" type="tipoFestivosLocales" minOccurs="0" maxOccurs="2"/>
+							<xs:element name="valoracion" type="tipoValoracion" minOccurs="0" maxOccurs="3"/>
+							<xs:element name="fechaComienzo" type="tipoFechaComienzo"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="tipoFestivos">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Pilar"/>
+			<xs:enumeration value="Reyes"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tipoFestivosLocales">
+		<xs:union memberTypes="xs:date tipoFestivos"/>
+	</xs:simpleType>
+	<xs:simpleType name="tipoValoracion">
+		<xs:union memberTypes="tipoEntre10Y100 tipoBuenaMalaRegular"/>
+	</xs:simpleType>
+	<xs:simpleType name="tipoEntre10Y100">
+		<xs:restriction base="xs:integer">
+			<xs:minInclusive value="10"/>
+			<xs:maxInclusive value="100"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tipoBuenaMalaRegular">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Buena"/>
+			<xs:enumeration value="Mala"/>
+			<xs:enumeration value="Regular"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tipoFechaComienzo">
+		<xs:union memberTypes="xs:gMonthDay xs:date"/>
+	</xs:simpleType>
+</xs:schema>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

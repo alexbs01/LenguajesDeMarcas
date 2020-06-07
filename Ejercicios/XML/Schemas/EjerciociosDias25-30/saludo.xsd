@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="http://www.w3.org/2001/XMLSchema.xsd"
+>
+	<xs:element name="cuerpoCarta">
+		<xs:complexType mixed="true">
+			<xs:sequence>
+				<xs:element name="saludo" type="xs:string"/>
+				<xs:element name="nombre" type="xs:string"/>
+				<xs:element name="cantidad" type="xs:integer"/>
+				<xs:element name="nombreProducto" type="xs:string"/>
+				<xs:element name="fechaEnvio" type="xs:date"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

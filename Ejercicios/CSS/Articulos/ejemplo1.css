@@ -1,0 +1,65 @@
+/* Lo que ponía en el enunciado */
+* { margin: auto; 
+	padding: 0;
+	font-family: arial;  }
+body {background-color: #f4d4d3; }
+
+
+/* Cabecera */
+h1 {color:#0000FF;}
+h2 {color:purple;
+	margin-bottom:0px;}
+h1, h2 {text-align:center;}
+header {background-color:#FFEEEE;}
+
+
+/* Barra de links */
+nav {background-color:#00571E;
+	height:30px;}
+nav p {display:inline;}
+nav p a {color:yellow;
+	background-color:green;}
+	
+	
+/* Cuerpo de la página	 */
+section {float:left;
+	width:70%;
+	background-color:#AAFF85;}
+
+
+/* Titulos de los artículos */
+section h1 {color:#88AD00;}
+section h2 {color:#AAAAAA;}
+section h3 {color:#460063;
+	text-indent:5%;}
+
+
+/* Artículos */
+article p {background-color:white;
+	border:2px solid cyan;
+	text-align:justify;
+	padding:5px 5%;}
+	article {margin:5px 5%;}
+
+
+/* Columna de anuncios */
+#anuncio1 {float:left;
+	clear:right;
+	background-color:white;
+	border:1px solid blue;
+	margin:2%;
+	width:20%;
+	padding:0% 2%;}
+#anuncio1 h1, #anuncio1 h2, #anuncio1 p{padding:3% 0%;}
+
+
+/* Pie de pagina */
+footer {background-color:#95FCE8;
+	float:left;
+	width:100%;}
+footer h2 {color:black;}
+footer h2 a {color:green;
+	text-decoration:none;}
+
+
+

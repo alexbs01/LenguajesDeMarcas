@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="http://www.w3.org/2001/XMLSchema.xsd"
+>
+	<xs:element name="lista">
+		<xs:complexType> 
+			<xs:sequence>
+				<xs:element name="alumno" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="nombre" type="xs:string"/>
+							<xs:element name="notamedia" type="tipoNotamedia"/>
+						</xs:sequence>
+						<xs:attribute name="edad" type="xs:integer"/>
+						<xs:attribute name="instituto" type="tipoInstituto"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="tipoNotamedia">
+		<xs:restriction base="xs:integer">
+			<xs:minInclusive value="1"/>
+			<xs:maxInclusive value="10"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tipoInstituto">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Fernando Wirtz"/>
+			<xs:enumeration value="Someso"/>
+			<xs:enumeration value="Eusebio"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

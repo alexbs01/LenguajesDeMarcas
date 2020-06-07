@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<Inventario>
+	<fabricante stock="2">Toshiba</fabricante>
+	<fabricante stock="1">Acer</fabricante>
+</Inventario>

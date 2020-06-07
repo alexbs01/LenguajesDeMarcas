@@ -1,0 +1,571 @@
+<!--================ Document Structure ==================================-->
+
+<!ELEMENT html (head, body)>
+<!ATTLIST html
+  %i18n;
+  id          ID             #IMPLIED
+  xmlns       %URI;          #FIXED 'http://www.w3.org/1999/xhtml'
+  >
+
+<!--================ Document Head =======================================-->
+
+<!ELEMENT head (%head.misc;,
+     ((title, %head.misc;, (base, %head.misc;)?) |
+      (base, %head.misc;, (title, %head.misc;))))>
+
+<!ATTLIST head
+  %i18n;
+  id          ID             #IMPLIED
+  profile     %URI;          #IMPLIED
+  >
+
+<!ELEMENT title (#PCDATA)>
+<!ATTLIST title 
+  %i18n;
+  id          ID             #IMPLIED
+  >
+
+<!ELEMENT base EMPTY>
+<!ATTLIST base
+  href        %URI;          #REQUIRED
+  id          ID             #IMPLIED
+  >
+
+<!ELEMENT meta EMPTY>
+<!ATTLIST meta
+  %i18n;
+  id          ID             #IMPLIED
+  http-equiv  CDATA          #IMPLIED
+  name        CDATA          #IMPLIED
+  content     CDATA          #REQUIRED
+  scheme      CDATA          #IMPLIED
+  >
+
+<!ELEMENT link EMPTY>
+<!ATTLIST link
+  %attrs;
+  charset     %Charset;      #IMPLIED
+  href        %URI;          #IMPLIED
+  hreflang    %LanguageCode; #IMPLIED
+  type        %ContentType;  #IMPLIED
+  rel         %LinkTypes;    #IMPLIED
+  rev         %LinkTypes;    #IMPLIED
+  media       %MediaDesc;    #IMPLIED
+  >
+
+<!ELEMENT style (#PCDATA)>
+<!ATTLIST style
+  %i18n;
+  id          ID             #IMPLIED
+  type        %ContentType;  #REQUIRED
+  media       %MediaDesc;    #IMPLIED
+  title       %Text;         #IMPLIED
+  xml:space   (preserve)     #FIXED 'preserve'
+  >
+
+<!ELEMENT script (#PCDATA)>
+<!ATTLIST script
+  id          ID             #IMPLIED
+  charset     %Charset;      #IMPLIED
+  type        %ContentType;  #REQUIRED
+  src         %URI;          #IMPLIED
+  defer       (defer)        #IMPLIED
+  xml:space   (preserve)     #FIXED 'preserve'
+  >
+
+<!ELEMENT noscript %Block;>
+<!ATTLIST noscript
+  %attrs;
+  >
+
+<!--=================== Document Body ====================================-->
+
+<!ELEMENT body %Block;>
+<!ATTLIST body
+  %attrs;
+  onload          %Script;   #IMPLIED
+  onunload        %Script;   #IMPLIED
+  >
+
+<!ELEMENT div %Flow;>
+<!ATTLIST div
+  %attrs;
+  >
+
+<!--=================== Paragraphs =======================================-->
+
+<!ELEMENT p %Inline;>
+<!ATTLIST p
+  %attrs;
+  >
+
+<!--=================== Headings =========================================-->
+
+<!ELEMENT h1  %Inline;>
+<!ATTLIST h1
+   %attrs;
+   >
+
+<!ELEMENT h2 %Inline;>
+<!ATTLIST h2
+   %attrs;
+   >
+
+<!ELEMENT h3 %Inline;>
+<!ATTLIST h3
+   %attrs;
+   >
+
+<!ELEMENT h4 %Inline;>
+<!ATTLIST h4
+   %attrs;
+   >
+
+<!ELEMENT h5 %Inline;>
+<!ATTLIST h5
+   %attrs;
+   >
+
+<!ELEMENT h6 %Inline;>
+<!ATTLIST h6
+   %attrs;
+   >
+
+<!--=================== Lists ============================================-->
+
+<!ELEMENT ul (li)+>
+<!ATTLIST ul
+  %attrs;
+  >
+
+<!ELEMENT ol (li)+>
+<!ATTLIST ol
+  %attrs;
+  >
+
+<!ELEMENT li %Flow;>
+<!ATTLIST li
+  %attrs;
+  >
+
+<!ELEMENT dl (dt|dd)+>
+<!ATTLIST dl
+  %attrs;
+  >
+
+<!ELEMENT dt %Inline;>
+<!ATTLIST dt
+  %attrs;
+  >
+
+<!ELEMENT dd %Flow;>
+<!ATTLIST dd
+  %attrs;
+  >
+
+<!--=================== Address ==========================================-->
+
+<!ELEMENT address %Inline;>
+<!ATTLIST address
+  %attrs;
+  >
+
+<!--=================== Horizontal Rule ==================================-->
+
+<!ELEMENT hr EMPTY>
+<!ATTLIST hr
+  %attrs;
+  >
+
+<!--=================== Preformatted Text ================================-->
+
+<!ELEMENT pre %pre.content;>
+<!ATTLIST pre
+  %attrs;
+  xml:space (preserve) #FIXED 'preserve'
+  >
+
+<!--=================== Block-like Quotes ================================-->
+
+<!ELEMENT blockquote %Block;>
+<!ATTLIST blockquote
+  %attrs;
+  cite        %URI;          #IMPLIED
+  >
+
+<!--=================== Inserted/Deleted Text ============================-->
+
+<!ELEMENT ins %Flow;>
+<!ATTLIST ins
+  %attrs;
+  cite        %URI;          #IMPLIED
+  datetime    %Datetime;     #IMPLIED
+  >
+
+<!ELEMENT del %Flow;>
+<!ATTLIST del
+  %attrs;
+  cite        %URI;          #IMPLIED
+  datetime    %Datetime;     #IMPLIED
+  >
+
+<!--================== The Anchor Element ================================-->
+
+<!ELEMENT a %a.content;>
+<!ATTLIST a
+  %attrs;
+  %focus;
+  charset     %Charset;      #IMPLIED
+  type        %ContentType;  #IMPLIED
+  name        NMTOKEN        #IMPLIED
+  href        %URI;          #IMPLIED
+  hreflang    %LanguageCode; #IMPLIED
+  rel         %LinkTypes;    #IMPLIED
+  rev         %LinkTypes;    #IMPLIED
+  shape       %Shape;        "rect"
+  coords      %Coords;       #IMPLIED
+  >
+
+<!--===================== Inline Elements ================================-->
+
+<!ELEMENT span %Inline;> <!-- generic language/style container -->
+<!ATTLIST span
+  %attrs;
+  >
+
+<!ELEMENT bdo %Inline;>  <!-- I18N BiDi over-ride -->
+<!ATTLIST bdo
+  %coreattrs;
+  %events;
+  lang        %LanguageCode; #IMPLIED
+  xml:lang    %LanguageCode; #IMPLIED
+  dir         (ltr|rtl)      #REQUIRED
+  >
+
+<!ELEMENT br EMPTY>   <!-- forced line break -->
+<!ATTLIST br
+  %coreattrs;
+  >
+
+<!ELEMENT em %Inline;>   <!-- emphasis -->
+<!ATTLIST em %attrs;>
+
+<!ELEMENT strong %Inline;>   <!-- strong emphasis -->
+<!ATTLIST strong %attrs;>
+
+<!ELEMENT dfn %Inline;>   <!-- definitional -->
+<!ATTLIST dfn %attrs;>
+
+<!ELEMENT code %Inline;>   <!-- program code -->
+<!ATTLIST code %attrs;>
+
+<!ELEMENT samp %Inline;>   <!-- sample -->
+<!ATTLIST samp %attrs;>
+
+<!ELEMENT kbd %Inline;>  <!-- something user would type -->
+<!ATTLIST kbd %attrs;>
+
+<!ELEMENT var %Inline;>   <!-- variable -->
+<!ATTLIST var %attrs;>
+
+<!ELEMENT cite %Inline;>   <!-- citation -->
+<!ATTLIST cite %attrs;>
+
+<!ELEMENT abbr %Inline;>   <!-- abbreviation -->
+<!ATTLIST abbr %attrs;>
+
+<!ELEMENT acronym %Inline;>   <!-- acronym -->
+<!ATTLIST acronym %attrs;>
+
+<!ELEMENT q %Inline;>   <!-- inlined quote -->
+<!ATTLIST q
+  %attrs;
+  cite        %URI;          #IMPLIED
+  >
+
+<!ELEMENT sub %Inline;> <!-- subscript -->
+<!ATTLIST sub %attrs;>
+
+<!ELEMENT sup %Inline;> <!-- superscript -->
+<!ATTLIST sup %attrs;>
+
+<!ELEMENT tt %Inline;>   <!-- fixed pitch font -->
+<!ATTLIST tt %attrs;>
+
+<!ELEMENT i %Inline;>   <!-- italic font -->
+<!ATTLIST i %attrs;>
+
+<!ELEMENT b %Inline;>   <!-- bold font -->
+<!ATTLIST b %attrs;>
+
+<!ELEMENT big %Inline;>   <!-- bigger font -->
+<!ATTLIST big %attrs;>
+
+<!ELEMENT small %Inline;>   <!-- smaller font -->
+<!ATTLIST small %attrs;>
+
+<!--==================== Object ======================================-->
+
+<!ELEMENT object (#PCDATA | param | %block; | form | %inline; | %misc;)*>
+<!ATTLIST object
+  %attrs;
+  declare     (declare)      #IMPLIED
+  classid     %URI;          #IMPLIED
+  codebase    %URI;          #IMPLIED
+  data        %URI;          #IMPLIED
+  type        %ContentType;  #IMPLIED
+  codetype    %ContentType;  #IMPLIED
+  archive     %UriList;      #IMPLIED
+  standby     %Text;         #IMPLIED
+  height      %Length;       #IMPLIED
+  width       %Length;       #IMPLIED
+  usemap      %URI;          #IMPLIED
+  name        NMTOKEN        #IMPLIED
+  tabindex    %Number;       #IMPLIED
+  >
+
+<!ELEMENT param EMPTY>
+<!ATTLIST param
+  id          ID             #IMPLIED
+  name        CDATA          #IMPLIED
+  value       CDATA          #IMPLIED
+  valuetype   (data|ref|object) "data"
+  type        %ContentType;  #IMPLIED
+  >
+
+<!--=================== Images ===========================================-->
+
+<!ELEMENT img EMPTY>
+<!ATTLIST img
+  %attrs;
+  src         %URI;          #REQUIRED
+  alt         %Text;         #REQUIRED
+  longdesc    %URI;          #IMPLIED
+  height      %Length;       #IMPLIED
+  width       %Length;       #IMPLIED
+  usemap      %URI;          #IMPLIED
+  ismap       (ismap)        #IMPLIED
+  >
+
+<!--================== Client-side image maps ============================-->
+
+<!ELEMENT map ((%block; | form | %misc;)+ | area+)>
+<!ATTLIST map
+  %i18n;
+  %events;
+  id          ID             #REQUIRED
+  class       CDATA          #IMPLIED
+  style       %StyleSheet;   #IMPLIED
+  title       %Text;         #IMPLIED
+  name        NMTOKEN        #IMPLIED
+  >
+
+<!ELEMENT area EMPTY>
+<!ATTLIST area
+  %attrs;
+  %focus;
+  shape       %Shape;        "rect"
+  coords      %Coords;       #IMPLIED
+  href        %URI;          #IMPLIED
+  nohref      (nohref)       #IMPLIED
+  alt         %Text;         #REQUIRED
+  >
+
+<!--================ Forms ===============================================-->
+<!ELEMENT form %form.content;>   <!-- forms shouldn't be nested -->
+
+<!ATTLIST form
+  %attrs;
+  action      %URI;          #REQUIRED
+  method      (get|post)     "get"
+  enctype     %ContentType;  "application/x-www-form-urlencoded"
+  onsubmit    %Script;       #IMPLIED
+  onreset     %Script;       #IMPLIED
+  accept      %ContentTypes; #IMPLIED
+  accept-charset %Charsets;  #IMPLIED
+  >
+
+<!ELEMENT label %Inline;>
+<!ATTLIST label
+  %attrs;
+  for         IDREF          #IMPLIED
+  accesskey   %Character;    #IMPLIED
+  onfocus     %Script;       #IMPLIED
+  onblur      %Script;       #IMPLIED
+  >
+
+<!ELEMENT input EMPTY>     <!-- form control -->
+<!ATTLIST input
+  %attrs;
+  %focus;
+  type        %InputType;    "text"
+  name        CDATA          #IMPLIED
+  value       CDATA          #IMPLIED
+  checked     (checked)      #IMPLIED
+  disabled    (disabled)     #IMPLIED
+  readonly    (readonly)     #IMPLIED
+  size        CDATA          #IMPLIED
+  maxlength   %Number;       #IMPLIED
+  src         %URI;          #IMPLIED
+  alt         CDATA          #IMPLIED
+  usemap      %URI;          #IMPLIED
+  onselect    %Script;       #IMPLIED
+  onchange    %Script;       #IMPLIED
+  accept      %ContentTypes; #IMPLIED
+  >
+
+<!ELEMENT select (optgroup|option)+>  <!-- option selector -->
+<!ATTLIST select
+  %attrs;
+  name        CDATA          #IMPLIED
+  size        %Number;       #IMPLIED
+  multiple    (multiple)     #IMPLIED
+  disabled    (disabled)     #IMPLIED
+  tabindex    %Number;       #IMPLIED
+  onfocus     %Script;       #IMPLIED
+  onblur      %Script;       #IMPLIED
+  onchange    %Script;       #IMPLIED
+  >
+
+<!ELEMENT optgroup (option)+>   <!-- option group -->
+<!ATTLIST optgroup
+  %attrs;
+  disabled    (disabled)     #IMPLIED
+  label       %Text;         #REQUIRED
+  >
+
+<!ELEMENT option (#PCDATA)>     <!-- selectable choice -->
+<!ATTLIST option
+  %attrs;
+  selected    (selected)     #IMPLIED
+  disabled    (disabled)     #IMPLIED
+  label       %Text;         #IMPLIED
+  value       CDATA          #IMPLIED
+  >
+
+<!ELEMENT textarea (#PCDATA)>     <!-- multi-line text field -->
+<!ATTLIST textarea
+  %attrs;
+  %focus;
+  name        CDATA          #IMPLIED
+  rows        %Number;       #REQUIRED
+  cols        %Number;       #REQUIRED
+  disabled    (disabled)     #IMPLIED
+  readonly    (readonly)     #IMPLIED
+  onselect    %Script;       #IMPLIED
+  onchange    %Script;       #IMPLIED
+  >
+
+<!ELEMENT fieldset (#PCDATA | legend | %block; | form | %inline; | %misc;)*>
+<!ATTLIST fieldset
+  %attrs;
+  >
+
+<!ELEMENT legend %Inline;>     <!-- fieldset label -->
+<!ATTLIST legend
+  %attrs;
+  accesskey   %Character;    #IMPLIED
+  >
+
+<!ELEMENT button %button.content;>  <!-- push button -->
+<!ATTLIST button
+  %attrs;
+  %focus;
+  name        CDATA          #IMPLIED
+  value       CDATA          #IMPLIED
+  type        (button|submit|reset) "submit"
+  disabled    (disabled)     #IMPLIED
+  >
+
+<!--======================= Tables =======================================-->
+
+<!ELEMENT table
+     (caption?, (col*|colgroup*), thead?, tfoot?, (tbody+|tr+))>
+<!ELEMENT caption  %Inline;>
+<!ELEMENT thead    (tr)+>
+<!ELEMENT tfoot    (tr)+>
+<!ELEMENT tbody    (tr)+>
+<!ELEMENT colgroup (col)*>
+<!ELEMENT col      EMPTY>
+<!ELEMENT tr       (th|td)+>
+<!ELEMENT th       %Flow;>
+<!ELEMENT td       %Flow;>
+
+<!ATTLIST table
+  %attrs;
+  summary     %Text;         #IMPLIED
+  width       %Length;       #IMPLIED
+  border      %Pixels;       #IMPLIED
+  frame       %TFrame;       #IMPLIED
+  rules       %TRules;       #IMPLIED
+  cellspacing %Length;       #IMPLIED
+  cellpadding %Length;       #IMPLIED
+  >
+
+<!ATTLIST caption
+  %attrs;
+  >
+
+<!ATTLIST colgroup
+  %attrs;
+  span        %Number;       "1"
+  width       %MultiLength;  #IMPLIED
+  %cellhalign;
+  %cellvalign;
+  >
+
+<!ATTLIST col
+  %attrs;
+  span        %Number;       "1"
+  width       %MultiLength;  #IMPLIED
+  %cellhalign;
+  %cellvalign;
+  >
+
+<!ATTLIST thead
+  %attrs;
+  %cellhalign;
+  %cellvalign;
+  >
+
+<!ATTLIST tfoot
+  %attrs;
+  %cellhalign;
+  %cellvalign;
+  >
+
+<!ATTLIST tbody
+  %attrs;
+  %cellhalign;
+  %cellvalign;
+  >
+
+<!ATTLIST tr
+  %attrs;
+  %cellhalign;
+  %cellvalign;
+  >
+
+<!ATTLIST th
+  %attrs;
+  abbr        %Text;         #IMPLIED
+  axis        CDATA          #IMPLIED
+  headers     IDREFS         #IMPLIED
+  scope       %Scope;        #IMPLIED
+  rowspan     %Number;       "1"
+  colspan     %Number;       "1"
+  %cellhalign;
+  %cellvalign;
+  >
+
+<!ATTLIST td
+  %attrs;
+  abbr        %Text;         #IMPLIED
+  axis        CDATA          #IMPLIED
+  headers     IDREFS         #IMPLIED
+  scope       %Scope;        #IMPLIED
+  rowspan     %Number;       "1"
+  colspan     %Number;       "1"
+  %cellhalign;
+  %cellvalign;
+  >

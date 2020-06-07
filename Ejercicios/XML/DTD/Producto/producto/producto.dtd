@@ -1,0 +1,7 @@
+<!ELEMENT lista (producto+)>
+	<!ELEMENT producto (nombre, fabricante, precio+)>
+		<!ELEMENT nombre (#PCDATA)>
+		<!ELEMENT fabricante (empresa, localidad?)>
+			<!ELEMENT empresa (#PCDATA)>
+			<!ELEMENT localidad (#PCDATA)>
+		<!ELEMENT precio (#PCDATA)>

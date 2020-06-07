@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Lista xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="listas.xsd">
+	<Curso>
+		<Titulo>Lenguaje de Marcas</Titulo>
+		<Horas>200</Horas>
+		<fechas>2010-01-01 2011-02-02 2014-05-05</fechas> <!--Definir el tipo FUERA-->
+		<valoraciones>10 20 45 62 0</valoraciones> <!-- Definir el tipo DENTRO -->
+		<notaMedia>5</notaMedia> <!-- las nota media tiene que ser entre 0 y 10 -->
+		<notas>0 10 9 5 6</notas> <!-- las notas tienen que ser entre 0 y 10-->
+		<cicloReferencia>ASI</cicloReferencia> <!-- ASI, DAM o SMR -->
+		<ciclos>ASI DAM</ciclos>
+		<ciclos>ASI SMR</ciclos>
+		<ciclos>DAM ASI</ciclos>
+		<edades1>1 2 4 3 3</edades1>
+		<edades2>20 30 19</edades2>
+	</Curso>
+	<Curso>
+		<Titulo>BBDD</Titulo>
+		<Horas>210</Horas>
+		<fechas>2010-01-01 2011-02-02 2014-05-05</fechas> <!-- Definir el tipo FUERA -->
+		<valoraciones>10 20 45 62 0</valoraciones> <!-- Definir el tipo DENTRO -->
+		<notaMedia>5</notaMedia> <!-- las nota media tiene que ser entre 0 y 10 -->
+		<notas>0 10 9 5 6</notas> <!-- las notas tienen que ser entre 0 y 10 -->
+		<cicloReferencia>ASI</cicloReferencia> <!-- ASI, DAM o SMR -->
+		<ciclos>ASI DAM</ciclos> 
+		<ciclos>ASI SMR</ciclos>
+		<ciclos>DAM ASI</ciclos>
+		<edades1>1 2 4 3 3</edades1>
+		<edades2>20 30 19</edades2>
+	</Curso>
+</Lista>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lista xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="lista_notas_media.xsd">
+	<alumno edad="23" instituto="Fernando Wirtz"> 
+		<nombre>Juan Perez</nombre>
+		<notamedia>7</notamedia>
+	</alumno>
+	<alumno edad="19" instituto="Someso"> 
+		<nombre>Ana Rodriguez</nombre>
+		<notamedia>8</notamedia>
+	</alumno>
+	<alumno edad="13" instituto="Eusebio"> 
+		<nombre>Martínez Fernádez</nombre>
+		<notamedia>8</notamedia>
+	</alumno> 
+</lista>
+<!-- Nota media entre 1 y 10-->
+<!--Añadir dos atributos a alumno: edad (entero) e instituto(Someso,Eusebio,Fernando Wirtz) -->

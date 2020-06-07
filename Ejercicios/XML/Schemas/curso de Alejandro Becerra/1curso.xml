@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Lista xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xsi:noNamespaceSchemaLocation="curso.xsd">
+	<Curso>
+		<Titulo>Lenguaje de Marcas</Titulo>
+		<fInicio>2020-02-18</fInicio>
+		<Horas>200</Horas>
+		<precio>1000000</precio>
+		<horaComienzo>11:30:00</horaComienzo>
+		<horaFin>13:00:00</horaFin>
+		<examen>2020-02-18T11:30:00</examen>
+		<chuleta>1</chuleta>
+		<turnoTarde>0</turnoTarde>
+	</Curso>
+	<Curso>
+		<Titulo>BBDD</Titulo>
+		<fInicio>2020-03-18</fInicio>
+		<Horas>210</Horas>
+		<precio>1000000</precio>
+		<horaComienzo>11:30:00</horaComienzo>
+		<horaFin>13:00:00</horaFin>
+		<examen>2020-02-18T11:30:00</examen>
+		<chuleta>0</chuleta>
+		<turnoTarde>1</turnoTarde>
+	</Curso>
+</Lista>
+
+<!-- Añadir 	 -->
+<!-- precio 			>=1 después de Horas. -->
+<!-- horaCominezo 		hora a la que se imparte. -->
+<!-- horaFin 			hora a la que se termina la clase. -->
+<!-- examen				día y hora en la que es el examen. -->
+<!-- chuleta			si o no. -->
+<!-- turnoTarde			si o no. -->

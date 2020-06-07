@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="http://www.w3.org/2001/XMLSchema.xsd"
+>
+	<xs:element name="musica">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="disco" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="titulo" type="xs:string"/>
+							<xs:choice>
+								<xs:element name="grupo" type="xs:string"/>
+								<xs:element name="artista" type="xs:string"/>
+							</xs:choice>
+							<xs:element name="edicion" type="tipoEdicion"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="tipoEdicion">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="LP"/>
+			<xs:enumeration value="CD"/>
+			<xs:enumeration value="DVD"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

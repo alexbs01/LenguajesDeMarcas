@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Lista xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="repaso.xsd">
+	<Curso>
+		<Titulo>Lenguaje de Marcas</Titulo>
+		<Horas>200</Horas>
+		<edad1>15</edad1> 			 <!--es un entero-->
+		<edad2>0</edad2> 			 <!--es un entero positivo incluido el cero										-->
+		<edad3>23</edad3> 			 <!--es un entero mayor que 20													-->
+		<edad4>6</edad4> 			 <!--es un entero entre 5 y 7 ambos incluidos									-->
+		<nombre1>Alejandro</nombre1> <!--es una cadena de caracteres												-->
+		<nombre2>El Kevin</nombre2>  <!--es una cadena de caracteres de longitud mayor de 3							-->
+		<titulo1>TRES</titulo1> 	 <!--posibles valores UNO, DOS y TRES											-->
+		<titulo2>cinco</titulo2> 	 <!--longitud entre 5 y 10														-->
+		<clave1>Arbol</clave1> 		 <!--una cadena que empieza por A. DEFINIR EL TIPO DENTRO						-->	
+		<clave2>AEIou</clave2> 		 <!--una cadena con tres letras mayuscula y dos minusculas. DEFINIR EL TIPO FUERA--> 
+	</Curso>
+</Lista>

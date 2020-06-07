@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- El color puede ser cualquiera, pero tipo NMTOKEN -->
+<!-- La moneda puede ser euro o dolar con valor por defecto euro-->
+<!-- El precio tiene un atributo (iva) con valor fijo 18% -->
+<!-- Las referencias no se pueden repetir -->
+<!DOCTYPE lista SYSTEM "producto3.dtd">
+<lista>
+	<producto referencia="A1" color="AZUL">
+		<nombre>Muñeca de trapo</nombre>
+		<fabricante>
+			<empresa pais="España">Juegolandia SA</empresa>
+			<localidad>Valladolid</localidad>
+		</fabricante>
+		<precio cliente="final" moneda="dolar">60</precio>
+		<precio cliente="distribuidor">40</precio>
+	</producto>
+	<producto referencia="A2">
+		<nombre>Caballito de madera</nombre>
+		<fabricante>
+			<empresa>Juegolandia SA</empresa>
+			<localidad>Valladolid</localidad>
+		</fabricante>
+		<precio cliente="final">18</precio>
+		<precio cliente="distribuidor">12</precio>
+	</producto>
+	<producto referencia="A3">
+		<nombre>Tren madera básico</nombre>
+		<fabricante>
+			<empresa>Natura SL</empresa>
+		</fabricante>
+		<precio cliente="final">80</precio>
+		<precio cliente="distribuidor">60</precio>
+	</producto>
+</lista>

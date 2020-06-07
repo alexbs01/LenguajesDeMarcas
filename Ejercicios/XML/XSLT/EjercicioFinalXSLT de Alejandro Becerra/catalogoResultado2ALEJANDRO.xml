@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<Equipamento>
+	<Portátiles>
+		<!--Elementos da marca Toshiba-->
+		<Portatil marca="Toshiba">
+			<Ref>Satellite A300-203 ALEJANDRO</Ref>
+			<Nome>Toshiba Satellite A300-203 T6400/3GB/320GB/ATI HD 3470/15.4"</Nome>
+		</Portatil>
+		<Portatil marca="Toshiba">
+			<Ref>Satellite U400-200 ALEJANDRO</Ref>
+			<Nome>Toshiba Satellite U400-200 P8400/4GB/320GB/13.3"</Nome>
+		</Portatil>
+	
+		<!--Elementos da marca Acer-->
+		<Portatil marca="Acer">
+			<Ref>Extensa 5630Z ALEJANDRO</Ref>
+			<Nome>Acer Extensa 5630Z T3400/4GB/320GB 15.4"</Nome>
+		</Portatil>
+	</Portátiles>
+</Equipamento>

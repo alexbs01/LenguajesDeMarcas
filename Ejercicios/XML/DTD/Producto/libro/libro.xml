@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--El precio puede no aparecer o aparecer sólo una vez
+El libro pertenece siempre a tres categorías
+El precio puede estar en dol, eur o lib
+El libro estará identificado por el isbn, 
+y tendrá también un atributo llamado nivel, 
+que será el nivel educativo.
+-->
+<!DOCTYPE Libro SYSTEM "Libro.dtd">
+<Libro isbn="isbn-861003-11-0"
+       fecha ="Noviembre 1999"
+       paginas = "750">
+	<Titulo>Aprendiendo XML</Titulo>
+	<Abstract>Metodo de aprender XML</Abstract>
+	<Categorias>
+		<Categoria>Internet</Categoria>
+		<Categoria>Publicacion Web</Categoria>
+		<Categoria>XML</Categoria>
+	</Categorias>
+	<Precio moneda="eur">34.5</Precio>
+</Libro>

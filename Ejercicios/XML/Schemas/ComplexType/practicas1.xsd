@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="http://www.w3.org/2001/XMLSchema.xsd"
+>
+	<xs:element name="practicas">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="alumno" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="nif" type="tipoNIF"/>
+							<xs:element name="resultado" type="tipoResultado"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="tipoNIF">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[0-9]{8}[A-Z]"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tipoResultado">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Apto"/>
+			<xs:enumeration value="No Apto"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<practicas xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="practicas1.xsd">
+	<alumno>
+		<nif>95555555K</nif>
+		<resultado>Apto</resultado>
+	</alumno>
+	<alumno>
+		<nif>44444444A</nif>
+		<resultado>No Apto</resultado>
+	</alumno>
+</practicas>
+<!--
+Supuestos: 
+	El nif con 8 números y una letra.
+	resultado: Apto y No Apto.
+-->

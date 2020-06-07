@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<personas xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="AlumnosProfesores2.xsd">
+	<alumno nombre="Ana" instituto="Fernando Wirtz">
+		<grupo>SMR1</grupo>
+		<edad>20</edad>
+	</alumno>
+	<alumno nombre="Pepe" instituto="Eusebio">
+		<grupo>SMR1</grupo>
+		<edad>20</edad>
+	</alumno>
+	<profesor nombre="Pepe" instituto="Someso">
+		<materia>Informatica</materia>
+	</profesor>
+	<profesor nombre="Andrés" instituto="Fernando Wirtz">
+		<materia>Matemáticas</materia>
+	</profesor>
+</personas>
+
+<!-- 
+  Usamos grupos de atributos
+  instituto puede ser: Someso, Fernando Wirtz o Eusebio
+  -->

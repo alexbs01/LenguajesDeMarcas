@@ -1,0 +1,21 @@
+body {background-color: FFE6A1;}
+
+h1 {color:#AAAAAA; 
+	text-align:center;
+	font-size:300%;}
+	
+p {display:inline; 
+	float:left;
+	width:20%;
+	height:200px;
+	font-style:italic; 
+	border:3px dashed #F29829;
+	background-color:#FCBD6F;
+	margin:10px;
+	padding:10px;
+	text-align:justify;}
+
+p:first-letter{color:#F29829;
+	font-style:normal;
+	text-transform:capitalize;
+	font-size:300%;}

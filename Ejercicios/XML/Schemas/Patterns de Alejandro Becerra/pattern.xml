@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <Lista xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="pattern.xsd">
+	<Curso>
+		<Titulo>Lenguaje de Marcas</Titulo>
+		<Horas>200</Horas>
+		<alumno>Alejandro</alumno>
+		<codPostalCoruna>15001</codPostalCoruna>
+		<nombre1>David</nombre1>
+		<ordenador1>PC2004</ordenador1>
+		<ordenador>PC1803</ordenador>
+	</Curso>
+	<Curso>
+		<Titulo>BBDD</Titulo>
+		<Horas>210</Horas>
+		<alumno>Alejandro</alumno>
+		<codPostalCoruna>15001</codPostalCoruna>
+		<nombre1>David</nombre1>
+		<ordenador1>PC2004</ordenador1>
+		<ordenador>PC1803</ordenador>
+	</Curso>
+ </Lista>

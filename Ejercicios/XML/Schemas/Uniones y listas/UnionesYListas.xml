@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Lista xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="UnionesYListas.xsd">
+	<Curso>
+		<Titulo>Lenguaje de Marcas</Titulo>
+		<Horas>200</Horas>
+		<talla1>36</talla1> <!--36 38 40 42 44-->
+		<talla2>XL</talla2> <!--XS S M L XL -->
+		<talla3>38</talla3><!--36 38 40 42 44 XS S M L XL-->
+		<talla3>L</talla3>
+		<talla4>36 38</talla4><!--36 38 40 42 44-->
+		<valoracion>2</valoracion><!--Un entero o B M R-->
+		<edad>35</edad><!--Un numero entre 1 y 70, niño, adolescente, adulto.-->
+	</Curso>
+</Lista>

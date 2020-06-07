@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <musica xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="discos.xsd">
+	<disco>
+		<titulo>Blue Lines</titulo>
+		<grupo>Massive Attacks</grupo>
+		<edicion>LP</edicion> 
+	</disco>
+	<disco>
+		<titulo>One Love</titulo>
+		<artista>David Getta</artista>
+		<edicion>CD</edicion> 
+	</disco>
+</musica>
+
+
+<!--La edicion puede ser LP, CD o DVD.
+	Un titulo puede ser de un artista o de un grupo -->

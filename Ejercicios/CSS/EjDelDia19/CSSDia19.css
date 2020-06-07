@@ -1,0 +1,17 @@
+
+/* Sin modificar el HTML
+Div1 tipo de letra "courier"
+Todos los párrafos tamaño de letra "20"
+El primer párrafo del div2 en "negrita"
+Los segundos párrafos de cada div el tipo de letra "mayúscula pequeña"
+"Interliniado" para todo el documento de 20 puntos	El primer div "tabulado"
+El segundo div "espaciado de letras 5"	el segundo div "Centrado"
+A partir de aqui se puede modificar el HTML	Todas las palabras porcentual en "cursiva"
+Todos los div2 "subrayado"
+Todas las palabras resolucion de div2 además saldrán tachadas */
+
+body{line-height:20px;}
+div#uno{font:20px Courier; text-indent:20;}
+div#segundo{letter-spacing:5; text-align:center; text-decoration:underline;}
+div#segundo p:first-child{font-weight:bold;}
+div p:nth-child(2){font-variant:small-caps;}

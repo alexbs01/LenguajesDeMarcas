@@ -1,0 +1,14 @@
+#tabla1:before{content:url(./foto.png);}
+#tabla1 tr:nth-child(odd){background-color:pink;}
+#tabla1 tr:nth-child(even){background-color:gray;}
+#tabla1 tr:first-child {color:red;}
+#tabla1 tr:last-child {color:blue;}
+#tabla1 tr td:first-child {color:green;}
+#tabla1 tr:nth-child(4){text-decoration:underline;}
+
+#tabla2:after{content:"Fin de los contenidos de tabla2";}
+p:after{
+	content:"Fin de los contenidos de tabla2"; 
+	color:red;
+	background-color:gray;
+	}

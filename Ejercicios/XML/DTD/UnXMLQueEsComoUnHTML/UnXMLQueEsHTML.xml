@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "html.dtd">
+<html>
+	<head>
+		<title>Ejemplo de formulario GET</title>
+	</head>
+	<body>
+		<h1>Titulo</h1>
+		<h2>Formulario GET</h2>
+		<!--Puede no haber h2-->
+		<form action="recogeGet.html" method="get">
+			<!-- method puede ser get o post-->
+			<select name="menu">
+				<option>Uno</option>
+				<option>Dos</option>
+				<option>Tres</option>
+				<option>Cuatro</option>
+			</select>
+			<!-- el type del input sólo puede ser esos que aparecen -->
+			<input type="checkbox" name="lm"/>
+			<input type="checkbox" name="redes"/>
+			<input type="checkbox" name="bd"/>
+			<input type="radio" name="favorito" value="lm"/>
+			<input type="radio" name="favorito" value="redes"/>
+			<input type="radio" name="favorito" value="bd"/>
+
+			<input type="submit" value="Enviar"/>
+			<input type="reset" value="borrar"/>
+		</form>
+	</body>
+</html>

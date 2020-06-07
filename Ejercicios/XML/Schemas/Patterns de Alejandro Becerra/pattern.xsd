@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="http://www.w3.org/2001/XMLSchema.xsd"
+>
+	<xs:element name="Lista">
+		<xs:complexType> <!-- lista es complejo porque contiene elementos -->
+			<xs:sequence>
+				<xs:element name="Curso" maxOccurs="unbounded">
+					<xs:complexType>  <!-- curso es complejo porque contiene elementos -->
+						<xs:sequence>
+							<xs:element name="Titulo" type="xs:string"/>
+							<xs:element name="Horas" type="xs:nonNegativeInteger"/>
+							<xs:element name="alumno">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:pattern value="[A-Z][a-z]{1,10}"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="codPostalCoruna" type="tipoCodPostalCoruna"/>
+							<xs:element name="nombre1">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:pattern value="(A|D)[a-z]+"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="ordenador1" type="tipoOrdenadnor1"/>
+							<xs:element name="ordenador" type="tipoOrdenador"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="tipoCodPostalCoruna">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="15[0-9]{3}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tipoOrdenadnor1">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="PC20\d\d"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tipoOrdenador">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="PC(18|20|21)\d\d"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Modulo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="modulo.xsd">
+	<Nombre>Redes de Area Local</Nombre>
+	<Contidos>
+		<Bloque numero="1" evaluacion="2">
+			<Titulo>Sistemas de comunicacins</Titulo>
+			<Descripcion>Aspectos físicos, protocolos e arquitecturas de redes.</Descripcion>
+		</Bloque>
+		<Bloque numero="2" evaluacion="1">
+			<Titulo>Redes de datos</Titulo>
+			<Descripcion>Dispositivos de interconexión de redes locais e de área extensa.</Descripcion>
+		</Bloque>
+		<Bloque numero="3" evaluacion="3">
+			<Titulo>Redes de área local</Titulo>
+			<Descripcion>Administración e xestión dunha rede de área local.</Descripcion>
+		</Bloque>
+		<Bloque numero="4" evaluacion="3">
+			<Titulo>Servizos Internet</Titulo>
+			<Descripcion>Adm. de servizos que empreguen protocolos estándar en Internet.</Descripcion>
+		</Bloque>
+	</Contidos>
+</Modulo>
+<!--
+	Modificación: Añadir dos atributos a Bloque: numero y evaluacion (1,2,3)
+ -->

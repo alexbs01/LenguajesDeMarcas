@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html lang="es">
+	<head>
+		<title></title>
+	</head>
+	<body>
+	<form action="recogeGet.html" method="get" id="Formulario1">
+		<fieldset style="width:50%">
+			<legend align="left">formulario html5</legend>
+			Color preferido: <input type="color" name="ColorFavorito"><br/>
+			Fecha de nacimiento<br/>
+			<input type="date" name="FechaNacimiento"><br/>
+			Provincia de nacimiento:<br/>
+			<input name="ProvinciaNacimiento" list="provincias"><br/>
+			<datalist id="provincias">
+				<option value="A Coruña">
+				<option value="Lugo">
+				<option value="Ourense">
+				<option value="Pontevedra">
+			</datalist>
+			Provincia de residencia<br/>
+			<input name="ProvinciaResidenia" list="provincias"><br/>
+			Email<br/>
+			<input type="email" name="email" multiple value="@gmail.com"><br/>
+			URL de las entregas:<br/>
+			<input type="url" name="URL_Entregas"><br/>
+			En que mes empecé este curso:<br/>
+			<input type="month" name="MesComienzoClases" value="---------- de ----"><br/>
+			Edad<br/>
+			<input type="number" name="edad" min="18" max="50" step="1" placeholder="99"><br/>
+			Valoración del curso:<br/>
+			<input type="range" name="ValoracionCurso" min="0" max="10" step="5"><br/>
+			Datos a buscar<br/>
+			<input type="search" name="BuscarDatos"><br/>
+			<br/>
+			Nombre<font color="red">*</font><br/>
+			<input input="text" name="Nombre" required><br/>
+			<input type="submit" formnovalidate value="Enviar método get y no validar"/><br/>
+			<input type="submit" formtarget="_blank" value="Enviar y abrir en una ventana nueva"><br/>
+			<button type="submit" width="25%" height="20">Enviar</button>
+		</fieldset>
+	</form>
+	<input type="checkbox" name="EnviarInformacion" form="Formulario1">Enviar información<br/>
+	<font color="red">*</font>Obigatorio
+	<!--Hecho por Alejandro Becerra-->
+	</body>
+</html>

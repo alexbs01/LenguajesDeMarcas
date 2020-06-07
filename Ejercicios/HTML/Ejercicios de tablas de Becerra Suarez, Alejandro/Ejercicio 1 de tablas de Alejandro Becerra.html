@@ -1,0 +1,217 @@
+<html>
+	<head>
+		<title>Ejercicio 1 de tablas de Alejandro Becerra</title>
+	</head>
+	<body>
+		<table border="1" cellpadding="0" cellspacing="0" width="50%" height="75">
+			<tr height="20">
+				<td width="33%"></td>
+				<td></td>
+				<td>adiós</td>
+			</tr>
+			<tr height="20">
+				<td></td>
+				<td>hola</td>
+				<td></td>
+			<tr height="20">
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+		<h4>Espaciado entre celdas: CellSpacing</h4>
+		<hr>
+		
+		<h4>CellSpacing de 0</h4>
+		<table border="1" cellpadding="0" cellspacing="0" width="20%">
+			<tr>
+				<td>1</td>
+				<td>2</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>4</td>
+			</tr>
+		</table>
+		<hr>
+		
+		<h4>CellSpacing de 10</h4>
+		<table border="1" cellpadding="0" cellspacing="10" width="20%">
+			<tr>
+				<td>1</td>
+				<td>2</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>4</td>
+			</tr>
+		</table>
+		<hr>
+		<br>
+		
+		<h4>Márgenes de las celdas: CellPadding</h4>
+		<h4>CellPadding de 0</h4>
+		<table border="1" cellpadding="0" cellspacing="0" width="20%">
+			<tr>
+				<td>1</td>
+				<td>2</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>4</td>
+			</tr>
+		</table>
+		<hr>
+		
+		
+		<table border="1" cellpadding="10" cellspacing="0" width="20%">
+			<tr>
+				<td>1</td>
+				<td>2</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>4</td>
+			</tr>
+		</table>
+		<h4>CellPadding de 10</h4>
+		<hr>
+		
+		<h4>Las celdas pueden contener casi cualquier cosa</h4>
+		<table border="1" cellpadding="0" cellspacing="0" width="50%">
+			<tr align="center">
+				<td><img src="https://i.pinimg.com/originals/ea/aa/a5/eaaaa5b087a63ad0a1712e0290ae9ac0.png" width="50%"><br>Imágenes</td>
+				<td><a href="https://google.es">Contenidos</a><br>Hipertexto</td>
+			</tr>
+			<tr align="center" height="50">
+				<td>Algún texto</td>
+				<td>Otra tabla<br>
+					<table border="1" cellspacing="0" >
+						<tr>
+							<td>1</td>
+							<td>2</td>
+							<td>3</td>
+						</tr>
+						<tr>
+							<td>4</td>
+							<td>5</td>
+							<td></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		<hr>
+		
+		<h4>Atributo Rowspan y Colspan</h4>
+			<table nowrap border="1" cellspacing="0" width="50%">
+				<tr>
+					<td>1</td>
+					<td>2</td>
+					<td>3</td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td rowspan="2" colspan="2">Los atributos Rowspan y Colspan permiten que una celda ocupe más de una fila o columna</td>
+				</tr>
+				<tr>
+					<td>5</td>
+				</tr>
+			</table>
+		<hr>
+		
+		<h4>Cabeceras de filas y columnas</h4>
+			<table border="1" cellspacing="0">
+				<thead>
+					<tr>
+						<th></th>
+						<th colspan="5">Días de la semana</th>
+					</tr>
+					<tr>
+						<th></th>
+						<th>Lunes</th>
+						<th>Martes</th>
+						<th>Miércoles</th>
+						<th>Jueves</th>
+						<th>Viernes</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>1ª Semana</th>
+						<td>1</td>
+						<td>2</td>
+						<td>3</td>
+						<td>4</td>
+						<td>5</td>
+					</tr>
+					<tr>
+						<th>2ª Semana</th>
+						<td>6</td>
+						<td>7</td>
+						<td>8</td>
+						<td>9</td>
+						<td>10</td>
+					</tr>
+				</tbody>
+			</table>
+		<hr>
+		
+		<h4>Alineamiento de celdas</h4>
+			<table border="1" cellspacing="0" height="150" cellpadding="5">
+				<thead>
+					<tr>
+						<td></td>
+						<th colspan="3">Atributos de alineación, Align y VAlign</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>Alineación Vertical</th>
+						<td valign="top">Top</td>
+						<td valign="middle">Middle</td>
+						<td valign="bottom">Bottom</td>
+					</tr>
+					<tr>
+						<th>Alineación Horizontal</td>
+						<td align="left">Left</td>
+						<td align="center">Center</td>
+						<td align="right">Right</td>
+					</tr>
+				</tbody>
+			</table>
+		<hr>
+		
+		<h4>Fijando el ancho de las celdas y de la tabla</h4>
+			<table border="1" cellspacing="0" width="50%">
+				<tr>
+					<td width="20%">20%</td>
+					<td width="50%">50%</td>
+					<td width="15%">15%</td>
+					<td width="15%">15%</td>
+				</tr>
+			</table>
+		<hr>
+		
+		<h4>Centrado de tablas y fijación de títulos</h4>
+			<table border="1" cellspacing="1" width="75%" align="center">
+				<caption align="bottom">Figura 1: Tabla centrada con un ancho del 75%</caption>
+				<tr>
+					<td width="20%">20%</td>
+					<td width="50%">50%</td>
+					<td width="15%">15%</td>
+					<td width="15%">15%</td>
+				</tr>
+			</table>
+		<hr>
+
+		<h4>Tablas sin bordes</h4>
+			<table width="25%" align="center">
+				<tr>
+					<td><img src="https://st.depositphotos.com/2585479/3721/v/950/depositphotos_37212039-stock-illustration-working-signal.jpg" width="110%"></td>
+					<td>Página en construcción</td>
+				</tr>
+			</table>
+	<!--Hecho por Alejandro Becerra-->
+	</body>
+</html>

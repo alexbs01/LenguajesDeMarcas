@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="http://www.w3.org/2001/XMLSchema.xsd"
+>
+	<xs:element name="personas">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:choice maxOccurs="unbounded">
+					<xs:element name="alumno">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="grupo" type="xs:string"/>
+								<xs:element name="edad" type="xs:integer"/>
+							</xs:sequence>
+							<xs:attributeGroup ref="grupoNombreInstituto"/>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="profesor">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="materia" type="xs:string"/>
+							</xs:sequence>
+							<xs:attributeGroup ref="grupoNombreInstituto"/>
+						</xs:complexType>
+					</xs:element>
+				</xs:choice>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:attributeGroup name="grupoNombreInstituto">
+		<xs:attribute name="nombre" type="xs:string"/>
+		<xs:attribute name="instituto" type="tipoInstituto"/>
+	</xs:attributeGroup>
+	<xs:simpleType name="tipoInstituto">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Someso"/>
+			<xs:enumeration value="Fernando Wirtz"/>
+			<xs:enumeration value="Eusebio"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

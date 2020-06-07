@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <informacion xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="cursoClaves.xsd">
+	<Curso>
+		<codigoC>C12</codigoC>
+		<Titulo>Marcas</Titulo>
+		<Horas>200</Horas>
+		<fechaComienzo dia="5"/>
+	</Curso>
+	<Curso>
+		<codigoC>C2</codigoC>
+		<Titulo>Redes</Titulo>
+		<Horas>210</Horas>
+	</Curso>
+	<profesor especialidad="Informatica" instituto="A1" edad="40">
+		<codigo>P1</codigo>
+		<nombre>Maria</nombre>
+		<asignaturas>LM SR</asignaturas>
+		<comienzo>2020-01-02</comienzo>
+	</profesor>
+	<profesor instituto="A2" edad="45">
+		<codigo>P2</codigo>
+		<nombre>Ignacio</nombre>
+		<asignaturas>LM SR PR</asignaturas>
+		<comienzo>1SEMESTRE</comienzo>
+	</profesor>	
+	<alumno instituto="A2" edad="20">
+		<codigo>Alu1</codigo>
+		<nombre>Maria Jose</nombre>
+		<obersevaciones>es becario</obersevaciones>
+		<correoE>maria@gmail.com</correoE>
+	</alumno>
+	<alumno instituto="A1" edad="25">
+		<codigo>Alu3</codigo>
+		<nombre>Jose</nombre>
+		<obersevaciones>es becario</obersevaciones>
+		<telefono>981147857</telefono>
+	</alumno>
+ </informacion>

@@ -1,0 +1,16 @@
+<!ELEMENT html (head, body)>
+	<!ELEMENT head (title)>
+		<!ELEMENT title (#PCDATA)>
+	<!ELEMENT body (h1, h2*, form)>
+		<!ELEMENT h1 (#PCDATA)>
+		<!ELEMENT h2 (#PCDATA)>
+		<!ELEMENT form (select, input+)>
+			<!ATTLIST form action NMTOKEN>
+			<!ATTLIST form method (get|post)>
+			<!ELEMENT select (option+)>
+				<!ELEMENT option (#PCDATA)>
+			<!ELEMENT input EMPTY>
+				<!ATTLIST input type "checkbox" name (lm|redes|bd)>
+				<!ATTLIST input type "radio" name "favorito" vaue (lm|redes|bd)>
+				<!ATTLIST input type "submit" vaue (Enviar)>
+				<!ATTLIST input type "reset" vaue (borrar)>	

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE lista SYSTEM "producto.dtd">
+<lista>
+	<producto>
+		<nombre>Muñeca de trapo</nombre>
+		<fabricante>
+			<empresa>Juegolandia SA</empresa>
+			<localidad>Valladolid</localidad>
+		</fabricante>
+		<precio>60</precio>
+	</producto>
+	<producto>
+		<nombre>Caballito de madera</nombre>
+		<fabricante>
+			<empresa>Juegolandia SA</empresa>
+			<localidad>Valladolid</localidad>
+		</fabricante>
+		<precio>18</precio>
+		<precio>12</precio>
+	</producto>
+	<producto>
+		<nombre>Tren madera básico</nombre>
+		<fabricante>
+			<empresa>Natura SL</empresa>
+		</fabricante>
+		<precio>80</precio>
+	</producto>
+</lista>

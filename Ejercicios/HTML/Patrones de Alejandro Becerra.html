@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+
+<html lang="es">
+	<head>
+		<title>Formulario HTML5</title>
+	</head>
+	<body>
+		<form action="recogeGet.html" method="get" target="_blank">
+			Nombre: <input type="text" name="nombre" pattern="\d{1,2}[A-Z][a-Z]+" maxlength="10"/><br/>
+			Código Postal: <input type="text" name="CodigoPostal" maxlength="5"/><br/>
+			Teléfono fijo de Coruña: <input type="tel" name="TelefonoFijo" value="981" maxlength="9" pattern="981\d{6}"/><br/>
+			Teléfono móvil: <input type="tel" name="TelefonMovil" value="6" maxlength="9" pattern="6\d{8}"/><br/>
+			DNI: <input type="text" name="DNI" pattern="\d{8}-[A-Z]" placeholder="99999999-X" maxlength="9"/><br/>
+			Nombres que empiecen por A o B: <input type="text" name="NombreConAoB" pattern="[AB][a-z]*"/><br/>
+			Nombre de ordenador del aula 05: <input type="text" name="NombreOrdenadorAula05" value="PC05" maxlength="6" pattern="PC05[0-9]{2}"/><br/>
+			Nombre de ordenador de las aulas 20, 18 y 05: <input type="text" name="NombreOrdenadorAulas20_18_05" value="PC" maxlength="6" pattern="PC(20|18|05)[0-9]{2}"/><br/>
+			<input type="submit" value="Enviar"/>
+		</form>
+	<!--Hecho por Alejandro Becerra-->	
+	</body>
+</html>
